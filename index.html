@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem y Flexbox</title>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      background-color: #b3d9ff;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .layout {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .layout__title {
+      text-align: center;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .layout__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .layout__item {
+      background-color: #fff4cc;
+      border: 3px solid #ffc85c;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* ======= Diseño 1 ======= */
+    .layout--columna .layout__container {
+      flex-direction: column-reverse;
+      align-items: center;
+      background-color: #b3d9ff;
+      height: 400px;
+      justify-content: space-between;
+    }
+
+    /* ======= Diseño 2 ======= */
+    .layout--fila {
+      background-color: #fff;
+    }
+
+    .layout--fila .layout__container {
+      justify-content: space-between;
+    }
+
+    /* ======= Diseño 3 ======= */
+    .layout--mixto .layout__container {
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .layout--mixto .layout__item {
+      background-color: #eee;
+      flex: 1 1 150px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Diseño 1 -->
+  <section class="layout layout--columna">
+    <h2 class="layout__title">Diseño 1: Columna Invertida</h2>
+    <div class="layout__container">
+      <div class="layout__item">Item 4</div>
+      <div class="layout__item">Item 3</div>
+      <div class="layout__item">Item 2</div>
+      <div class="layout__item">Item 1</div>
+    </div>
+  </section>
+
+  <!-- Diseño 2 -->
+  <section class="layout layout--fila">
+    <h2 class="layout__title">Diseño 2: Distribución Horizontal</h2>
+    <div class="layout__container">
+      <div class="layout__item">Item 4</div>
+      <div class="layout__item">Item 5</div>
+      <div class="layout__item">Item 1</div>
+      <div class="layout__item">Item 2</div>
+      <div class="layout__item">Item 3</div>
+    </div>
+  </section>
+
+  <!-- Diseño 3 -->
+  <section class="layout layout--mixto">
+    <h2 class="layout__title">Diseño 3: Combinado</h2>
+    <div class="layout__container">
+      <div class="layout__item">Item 5</div>
+      <div class="layout__item">Item 4</div>
+      <div class="layout__item">Item 3</div>
+      <div class="layout__item">Item 2</div>
+      <div class="layout__item">Item 1</div>
+    </div>
+  </section>
+
+</body>
+</html>
